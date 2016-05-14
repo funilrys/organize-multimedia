@@ -1,2 +1,5 @@
-# organize-multimedia-linux
-This script organize all multimedia (pics/videos) in the folder of your choice by date. System : UNIX / Linux
+# Organize Multimedia on UNIX based system
+This script allows to organize by date (via subfolder) all the photos and videos in the current folder
+
+##Systems
+ * UNIX (Linux, Mac ..)

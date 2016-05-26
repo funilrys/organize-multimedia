@@ -30,7 +30,8 @@ then
     exit 3
 fi
 # using a tmp file you can have spaces in the file path
-find "$cfgSource" -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.nef" -o -iname "*.png" -o -iname "*.bmp" -o -iname "*.avi" -o -iname "*.flv" -o -iname "*.mov" -o -iname "*.mpg" -o -iname "*.mp4" > images.tmp
+find "$cfgSource" -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.nef" -o -iname "*.png" -o -iname "*.bmp" -o -iname "*.avi" -o -iname "*.flv" -o -iname"*.VOB" -o -iname 
+"*.mov" -o -iname "*.mpg" -o -iname "*.mp4" > images.tmp
 #for f in $(find "$cfgSource" -iname "*.jpg" -o -iname "*.nef")
 cat ./images.tmp | while read f;
 do

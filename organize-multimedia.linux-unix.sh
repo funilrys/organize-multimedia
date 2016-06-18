@@ -31,10 +31,10 @@ then
 fi
 # using a tmp file you can have spaces in the file path
 find "$cfgSource" -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.nef" -o -iname "*.png" -o -iname "*.bmp" -o -iname "*.avi" -o -iname "*.flv" -o -iname "*.VOB" -o -iname "*.mov" -o -iname "*.mpg" -o -iname "*.mp4" > images.tmp
-#for f in $(find "$cfgSource" -iname "*.jpg" -o -iname "*.nef")
+
 cat ./images.tmp | while read f;
 do
-        #f=$(escapeSpaces "${f}")
+       
         # Make sure the file we've been given by find actually exists.
         if [ -f "${f}" ]; then
                 echo " "
@@ -102,6 +102,5 @@ find "$cfgSource" -iname "*.thm" -exec rm -v {} +
 find "$cfgSource" -iname "*.IND" -exec rm -v {} +
 find "$cfgSource" -iname "Thumbs.db" -exec rm -v {} +
 find "$cfgSource" -type d -empty -delete
-#find "$cfgSource" -depth -type d -empty -exec rmdir -v {} +
 #Delete temporary file
 rm images.tmp
